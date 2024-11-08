@@ -1,0 +1,114 @@
+.cart-container {
+    padding: 2rem 2rem 3rem;
+    max-width: 50rem;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #333;
+  }
+  
+  .empty-cart {
+    text-align: center;
+    color: #777;
+    font-size: 1.2rem;
+  }
+  
+  .cart-items {
+    margin-top: 1.5rem;
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e0e0e0;
+  
+    .item-details {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+  
+    .item-image {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 0.5rem;
+      object-fit: cover;
+    }
+  
+    .item-info {
+      p {
+        margin: 0;
+        font-size: 1rem;
+      }
+  
+      .item-name {
+        font-weight: 500;
+        font-size: 1.125rem;
+        color: #333;
+      }
+  
+      .item-description {
+        color: #777;
+        font-size: 0.875rem;
+      }
+  
+      .item-price {
+        font-weight: 600;
+        color: #333;
+        margin-top: 0.5rem;
+      }
+    }
+  
+    .remove-button {
+      background: none;
+      border: none;
+      color: #e60000;
+      cursor: pointer;
+      font-weight: 600;
+      text-decoration: underline;
+      transition: color 0.3s;
+  
+      &:hover {
+        color: #d10000;
+      }
+    }
+  }
+  
+  .cart-summary {
+    margin-top: 2rem;
+    text-align: center;
+  
+    .total-price {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #333;
+    }
+  
+    .clear-cart-button {
+      margin-top: 1rem;
+      padding: 0.75rem 2rem;
+      background-color: #e60000;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  
+      &:hover {
+        background-color: #d10000;
+      }
+    }
+  }
+  

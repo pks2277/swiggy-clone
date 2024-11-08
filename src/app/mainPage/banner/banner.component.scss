@@ -1,0 +1,96 @@
+.hero-section {
+  background-color: #fe7607; 
+  min-height: 100vh;
+
+  .hero-content {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+
+    .hero-title {
+      font-size: 2rem; 
+      font-weight: bold;
+      color: white;
+      margin-bottom: 1rem;
+
+      @media (min-width: 768px) {
+        font-size: 3rem; 
+      }
+    }
+  }
+
+  .search-section {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+
+    .search-bar {
+      display: flex;
+      gap: 0.5rem;
+
+      .search-input {
+        padding: 0.75rem 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid #ddd;
+        width: 250px;
+      }
+
+      .search-button {
+        padding: 0.75rem 1.5rem;
+        background-color: #fbbf24; // Button color
+        color: white;
+        border-radius: 0.5rem;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #eab308; 
+        }
+      }
+    }
+  }
+}
+
+.category-section {
+  padding: 3rem 1rem;
+
+  .category-card {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+
+    .category-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 0.75rem;
+    }
+
+    .category-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #333;
+      margin-top: 1rem;
+    }
+
+    .category-description {
+      font-size: 1rem;
+      color: #555;
+      margin: 0.5rem 0;
+    }
+
+    .category-offer {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #fb923c; 
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+}

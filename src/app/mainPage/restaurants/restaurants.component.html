@@ -1,0 +1,22 @@
+
+<section class="restaurant-list-section m-8">
+  <h1 class="section-title p-6 font-semibold">Restaurants with online food delivery in Bhubaneswar</h1>
+
+  <div class="restaurant-cards-container flex flex-wrap gap-4 mx-auto justify-center">
+    <a 
+      *ngFor="let restaurant of restaurants" 
+      [routerLink]="['/restaurant', restaurant.id]" 
+      class="restaurant-card block w-64 space-y-1 shadow-sm rounded-lg hover:shadow-md hover:scale-95 transition-shadow duration-200"
+    >
+      <img [src]="restaurant.imageUrl" class="restaurant-image w-64 h-52 rounded-2xl">
+
+      <div class="restaurantPage space-y-1 px-2 pb-2">
+        <p class="restaurant-name font-medium text-base leading-tight">{{ restaurant.name }}</p>
+
+        <p class="restaurant-cuisines text-sm text-gray-600 leading-tight">Cuisines: {{ restaurant.cuisine.join(', ') }}</p>
+
+        <p class="restaurant-location text-sm text-gray-600 leading-tight">Location: {{ restaurant.location }}</p>
+      </div>
+    </a>
+  </div>
+</section>

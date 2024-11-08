@@ -1,0 +1,217 @@
+.restaurant-menu-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+
+  .restaurant-info {
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #f0f0f0;
+
+    .restaurant-name {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .cuisines,
+    .location {
+      font-size: 1rem;
+      color: #666;
+    }
+  }
+
+  .menu-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+
+  .menu-divider {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 50%;
+    border-top: 2px solid #ddd;
+  }
+
+  .menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .menu-item {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: #fff;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .item-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+
+      .favorite-button {
+        background-color: #f0f0f0;
+        border: none;
+        padding: 0.5rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #ff6b6b;
+          color: white;
+        }
+      }
+    }
+
+    .menu-item-details {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .item-info {
+        padding-left: 1rem;
+
+        .item-name {
+          font-size: 1.25rem;
+          font-weight: 600;
+          color: #333;
+        }
+
+        .item-price {
+          font-size: 1.125rem;
+          font-weight: 600;
+          color: #28a745;
+        }
+
+        .item-description {
+          font-size: 1rem;
+          color: #666;
+          margin-top: 0.5rem;
+        }
+      }
+
+      .item-image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .item-img {
+          width: 120px;
+          height: 120px;
+          border-radius: 10px;
+        }
+
+        .add-to-cart-btn {
+          margin-top: -1.5rem;
+          padding: 0.5rem 1.5rem;
+          font-size: 1rem;
+          font-weight: 600;
+          background-color: white;
+          border: 2px solid #28a745;
+          color: #28a745;
+          cursor: pointer;
+          transition: background-color 0.3s, color 0.3s;
+
+          &:hover {
+            background-color: #28a745;
+            color: white;
+          }
+        }
+      }
+    }
+
+    .divider {
+      margin-top: 1.5rem;
+      border-top: 1px solid #eee;
+    }
+  }
+
+  .warning-notification {
+    width: 280px;
+    padding: 1rem;
+    border: 1px solid #f0ad4e;
+    background-color: #fff3cd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    p {
+      font-size: 1rem;
+      color: #856404;
+    }
+
+    .yes-button,
+    .no-button {
+      background-color: #fff;
+      border: 1px solid #28a745;
+      color: #28a745;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #28a745;
+        color: white;
+      }
+    }
+  }
+
+  .restaurant-not-found {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #999;
+    text-align: center;
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .restaurant-menu-container {
+    padding: 1rem;
+
+    .menu-title {
+      font-size: 1.25rem;
+    }
+
+    .menu-item {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .menu-item-details {
+      flex-direction: column;
+      align-items: center;
+
+      .item-info {
+        padding-left: 0;
+        text-align: center;
+      }
+
+      .item-image {
+        margin-top: 1rem;
+      }
+    }
+
+    .warning-notification {
+      width: 100%;
+    }
+  }
+}

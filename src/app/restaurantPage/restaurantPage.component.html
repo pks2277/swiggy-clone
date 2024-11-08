@@ -1,0 +1,61 @@
+<app-header></app-header>
+
+<section class="restaurant-menu-container mx-auto max-w-4xl my-4"> 
+  <div *ngIf="restaurant">
+    <div class="restaurant-info">
+      <p class="font-medium text-lg">{{ restaurant.name }}</p>
+      <p>Cuisines: {{ restaurant.cuisine.join(', ') }}</p>
+      <p>Location: {{ restaurant.location }}</p>
+    </div>
+
+    <p class="text-center text-gray-600">MENU</p>
+    <hr class="menu-divider mx-auto max-w-4xl m-4">
+
+    <div class="menu-items">
+      <div *ngFor="let item of menuItems" class="menu-item">
+        <div class="item-header flex items-center justify-between gap-3">
+          <img [src]="item.veg ? '../../assets/veg.png' : '../../assets/nonveg.png'" class="w-5 h-5 inline-block" alt="Veg/Non-Veg">
+          
+          <button 
+            (click)="toggleFavorite(item)" 
+            class="favorite-button mt-2 rounded-full p-2">
+            <ng-container *ngIf="isFavorite(item)">
+              
+              <img src="../assets/favorite/heart.png" class="w-6 h-6 inline-block" alt="Favorite">
+            </ng-container>
+            <ng-container *ngIf="!isFavorite(item)">
+              
+              <img src="../assets/favorite/heart (1).png" class="w-6 h-6 inline-block" alt="Not Favorite">
+            </ng-container>
+          </button>
+        </div>
+
+        <div class="menu-item-details flex justify-between items-center">
+          <div class="item-info pl-4 pt-4">
+            <p class="font-medium text-base">{{ item.name }}</p>
+            <p class="font-medium text-base">₹{{ item.price }}</p>
+            <p class="text-gray-600">{{ item.description }}</p>
+          </div>
+
+          <!-- Item Image and Add to Cart Button -->
+          <div class="item-image flex flex-col items-center">
+            <img [src]="item.img" class="w-32 h-32 rounded-lg" alt="{{ item.name }}">
+            <button 
+              (click)="addToCart(item)" 
+              class="add-to-cart-btn text-green-600 text-lg font-medium border px-7 py-1 -mt-5 bg-white rounded-md">
+              ADD
+            </button>
+          </div>
+        </div>
+
+        <hr class="divider mt-4">
+      </div>
+    </div>
+
+    
+  </div>
+
+  <div *ngIf="!restaurant">
+    <p class="restaurant-not-found text-center text-gray-500">Restaurant not found.</p>
+  </div>
+</section>
